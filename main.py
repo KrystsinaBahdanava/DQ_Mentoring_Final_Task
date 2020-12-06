@@ -1,0 +1,52 @@
+import json
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+with open("config.json") as f:
+    config = json.load(f)
+
+driver = webdriver.Firefox()
+driver.maximize_window()
+driver.get("https://projectby.trainings.dlabanalytics.com/krystin590/notebooks/DQChecks.ipynb")
+elem = driver.find_element_by_id("zocial-epam-idp").click()
+inputElement = driver.find_element_by_id("userNameInput")
+inputElement.send_keys(config['login'])
+inputElement = driver.find_element_by_id("passwordInput")
+inputElement.send_keys(config['password'])
+inputElement.send_keys(Keys.ENTER)
+driver.find_element_by_id("submitButton").click()
+
+driver.implicitly_wait(10)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+driver.implicitly_wait(1)
+driver.find_element_by_xpath('//*[@title="Run"]').click()
+
